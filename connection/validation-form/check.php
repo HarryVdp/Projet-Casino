@@ -1,7 +1,8 @@
 <?php
-   $login = filter_var(trim($_POST['login']),FILTER_SANITIZE_STRING);
-   $name = filter_var(trim($_POST['name']),FILTER_SANITIZE_STRING);
-   $pass = filter_var(trim($_POST['password']),FILTER_SANITIZE_STRING);
+   $login = filter_var(trim($_POST['login']));
+   $name = filter_var(trim($_POST['name']));
+   $pass = filter_var(trim($_POST['password']));
+   $money = 0;
 
 if(mb_strlen($login)<5 || mb_strlen($login) >90){
     echo "la longeur du login n'est pas correct";
@@ -19,9 +20,15 @@ else if(mb_strlen($pass)<2 || mb_strlen($pass) >8){
     exit();
 }
 $pass = md5($pass."qsdlmfkj09");
-   
-$mysql = new mysqli('localhost:8889', 'root', 'root', 'register-bd');
-$mysql->query("INSERT INTO `users` (`login`,`password`,`name`) VALUE('$login','$pass','$name')");
+
+$mysql = new mysqli('localhost:3306', 'root', 'root', 'register-bd');
+
+$mysql->query("INSERT INTO `users` (`login`,`password`,`name`) VALUES('$login','$pass','$name')");
+
+
+
+
+// $mysql->query("INSERT INTO `users` (`login`,`password`,`name`) VALUES('$login','$pass','$name')");
 
 $mysql->close();
 

@@ -4,7 +4,7 @@
 
   $pass = md5($pass."qsdlmfkj09");
    
-$mysql = new mysqli('localhost:8889', 'root', 'root', 'register-bd');
+$mysql = new mysqli('localhost:3306', 'root', 'root', 'register-bd');
 $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
 $user = $result->fetch_assoc();
 if(count($user) == 0){
