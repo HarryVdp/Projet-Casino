@@ -24,10 +24,15 @@ body{
 	overflow: hidden;
 	transition: 5s;
 }
-
 .container div{
+	font-size:20px;
+	font-weight:bold;
+	font-family:sans-serif;
+	color:#fff;
+}
+/* .container div{
 	height:50%;
-	width:200px;
+	width: 100px;
 	position: absolute;
 	clip-path: polygon(100% 0 , 50% 100% , 0 0 );
 	transform:translateX(-50%);
@@ -41,20 +46,58 @@ body{
 	font-family:sans-serif;
 	color:#fff;
 	left:135px;
-}
+}*/
 
 .container .one{
+	height:50%;
+	width: 400px;
+	position: absolute;
+	clip-path: polygon(100% 0 , 50% 100% , 0 0 );
+	transform:translateX(-50%);
+	transform-origin:bottom;
+	text-align:center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+	left:135px;
 	background-color: #3f51b5;
 	left:50%;
 }
+
 .container .two{
+	height:50%;
+	width: 100px;
+	position: absolute;
+	clip-path: polygon(115% -15% , 39% 100% , 0 0 );
+	transform:translateX(-50%);
+	transform-origin:bottom;
+	text-align:center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+	left:200px;
 	background-color: #ff9800;
-	transform: rotate(45deg);
+	transform: rotate(49deg);
 }
+
 .container .three{
+	height:50%;
+	width: 500px;
+	position: absolute;
+	clip-path: polygon(100% 0 , 48% 100% , 0 0 );
+	transform:translateX(-50%);
+	transform-origin:bottom;
+	text-align:center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	left:5px;
 	background-color: #e91e63;
-	transform:rotate(90deg);
+	transform:rotate(110deg);
 }
+/* 
 .container .four{
 	background-color: #4caf50;
 	transform: rotate(135deg);
@@ -74,7 +117,7 @@ body{
 .container .eight{
 	background-color: #f44336;
 	transform: rotate(315deg);
-}
+} */
 
 .arrow{
 	position: absolute;
@@ -101,8 +144,8 @@ body{
 	font-weight:bold;
 	font-size:20px;
 	color:#a2a2a2;
-	width: 80px;
-	height:80px;
+	width: 140px;
+	height:140px;
 	font-family: sans-serif;
 	border-radius:50%;
 	cursor: pointer;
