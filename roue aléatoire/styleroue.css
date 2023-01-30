@@ -60,7 +60,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 135px;
+	left: 25%;
 	background-color: #3f51b5;
 	transform: rotate(0deg);
 
@@ -77,7 +77,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 193px;
+	left: 0%;
 	background-color: #ff9800;
 	transform: rotate(40deg);
 }
@@ -93,7 +93,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 135px;
+	left: 0%;
 	background-color: #e91e63;
 	transform: rotate(80deg);
 }
@@ -111,16 +111,28 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 65px;
+	left: 0%;
 	background-color: #4caf50;
 	transform: rotate(140deg);
 }
 
-/*
+
 .container .five{
+	height: 50%;
+	width: 12%;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 0%;
 	background-color: #009688;
 	transform: rotate(180deg);
 }
+/*
 .container .six{
 	background-color: #795548;
 	transform: rotate(225deg);
