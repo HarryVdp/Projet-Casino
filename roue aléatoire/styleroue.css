@@ -77,10 +77,11 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 0%;
+	left: 37.5%;
 	background-color: #ff9800;
 	transform: rotate(40deg);
 }
+
 
 .container .three {
 	height: 50%;
@@ -93,7 +94,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 0%;
+	left: 25%;
 	background-color: #e91e63;
 	transform: rotate(80deg);
 }
@@ -111,15 +112,15 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 0%;
+	left: 10%;
 	background-color: #4caf50;
 	transform: rotate(140deg);
 }
 
 
-.container .five{
+.container .five {
 	height: 50%;
-	width: 12%;
+	width: 13%;
 	position: absolute;
 	clip-path: polygon(100% 0, 50% 100%, 0 0);
 	transform: translateX(-50%);
@@ -128,23 +129,61 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	left: 0%;
+	left: 43.50%;
 	background-color: #009688;
-	transform: rotate(180deg);
+	transform: rotate(186deg);
 }
-/*
-.container .six{
+
+
+.container .six {
+	height: 50%;
+	width: 65%;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 17.75%;
 	background-color: #795548;
-	transform: rotate(225deg);
+	transform: rotate(226.5deg);
 }
-.container .seven{
+
+
+.container .seven {
+	height: 50%;
+	width: 10%;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 45%;
 	background-color: #9c27b0;
-	transform: rotate(270deg);
+	transform: rotate(260deg);
 }
-.container .eight{
+
+
+.container .eight {
+	height: 50%;
+	width: 70%;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 15%;
 	background-color: #f44336;
-	transform: rotate(315deg);
-} */
+	transform: rotate(300deg);
+}
 
 .arrow {
 	position: absolute;
