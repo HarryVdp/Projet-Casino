@@ -22,6 +22,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	transition: 5s;
+	
 }
 
 .container div {
@@ -184,20 +185,6 @@ body {
 	background-color: #f44336;
 	transform: rotate(300deg);
 }
-
-.arrow {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	color: #fff;
-}
-
-.arrow::before {
-	content: "\1F817";
-	font-size: 50px;
-}
-
 #spin {
 	position: absolute;
 	top: 50%;
@@ -217,4 +204,20 @@ body {
 	cursor: pointer;
 	outline: none;
 	letter-spacing: 1px;
+}
+.roue__div span{
+	transform: rotate(-90deg);
+}
+.arrow{
+	position: absolute;
+	left:61.5%;
+	transform: rotate(90deg);
+	color:#fff;
+	z-index: 200;
+
+}
+
+.arrow::before{
+	content:"\1F817";
+	font-size:50px;
 }
