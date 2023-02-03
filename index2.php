@@ -81,7 +81,7 @@
 
     $valeur1 = $cartes[$random1]["valeur"];
     $valeur2 = $cartes[$random2]["valeur"];
-    $joueur1 = $valeur1 + $valeur2;
+    $pioche1 = $valeur1 + $valeur2;
     $valeur3 = $cartes[$random3]["valeur"];
     $valeur4 = $cartes[$random4]["valeur"];
     $valeur5 = $cartes[$random5]["valeur"];
@@ -93,18 +93,28 @@
 
     ?>
 
-    <form action="button" type="button" name="Add">
-        <input type="button" value="Piocher">
-        <?php $sommecartesjoueur = $joueur1 + $valeur3 ?>
+    <form action="index1.php" method="post">
+        <input type="hidden" name="click" value="piocher" />
+        <button type="submit">Piocher</button>
+    </form>
+    <form action="index1.php" method="post">
+        <input type="hidden" name="click" value="rester" />
+        <button type="submit">Rester</button>
     </form>
 
-    <?php echo $joueur1, "+", $valeur3, "=", $sommecartesjoueur ?>
+    <?php
 
+    if (isset($_POST['click'])) {
+        if ($_POST['click'] == "piocher") {
+            $pioche1 = $pioche1 + $valeur3;
+            echo $pioche1;
+        }
+        // if ($_POST['click'] == "rester") {
+        //     // piocher('j2');
+        // }
+    }
 
-
-
-
-
+    ?>
 
 </body>
 
