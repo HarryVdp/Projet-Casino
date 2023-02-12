@@ -14,27 +14,61 @@ btn.onclick = function () {
 	console.log(angle);
 
 	if (angle > 0 && angle < 48) {
-		alert("Dommage vous avez gagné 100 crédit")
+		Swal.fire({
+			icon: 'error',
+			title: 'Dommage !',
+			text: 'Vous avez gagné 100 crédits',
+		  })
 	}
 	if (angle > 49 && angle < 76) {
-		alert("Bravo vous avez gagné 200 crédit")
+		Swal.fire({
+			icon: 'success',
+			title: 'Bravo !',
+			text: 'Vous avez gagné 200 crédits'
+		  })
 	}
 	if (angle > 77 && angle < 127) {
-		alert("Dommage vous avez gagné 100 crédit")
+		Swal.fire({
+			icon: 'error',
+			title: 'Dommage !',
+			text: 'Vous avez gagné 100 crédits',
+		  })
 	}
 	if (angle > 128 && angle < 196) {
-		alert("Dommage vous avez gagné 65 crédit")
+		Swal.fire({
+			icon: 'error',
+			title: 'Dommage !',
+			text: 'Vous avez gagné 65 crédits',
+		  })
 	}
 	if (angle > 197 && angle < 207) {
-		alert("Bravo vous avez gagné 800 crédit")
+		Swal.fire({
+			icon: 'success',
+			title: 'Bravo !',
+			text: 'Vous avez gagné 800 crédits',			
+		  })
 	}
 	if (angle > 208 && angle < 268) {
-		alert("Dommage vous avez gagné 75 crédit")
+		Swal.fire({
+			icon: 'error',
+			title: 'Dommage !',
+			text: 'Vous avez gagné 75 crédits',
+		  })
 	}
 	if (angle > 269 && angle < 283) {
-		alert("Bravo vous avez gagné 400 crédit")
+		Swal.fire({
+			icon: 'success',
+			title: 'Bravo !',
+			text: 'Vous avez gagné 400 crédits'
+		  })
 	}
 	if (angle > 284 && angle < 359) {
-		alert("Dommage vous avez gagné 50 crédit")
+		Swal.fire({
+			icon: 'error',
+			title: 'Dommage !',
+			text: 'Vous avez gagné 50 crédits',
+		  })
 	}
 }
+
+
