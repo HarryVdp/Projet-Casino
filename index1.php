@@ -79,32 +79,43 @@
     echo "<img src='images/", $cartes[$random2]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $cartes[$random3]["image"], ".png' alt='Image'>";
 
-    $valeur1 = $cartes[$random1]["valeur"];
-    $valeur2 = $cartes[$random2]["valeur"];
-    $joueur1 = $valeur1 + $valeur2;
-    $valeur3 = $cartes[$random3]["valeur"];
-    $valeur4 = $cartes[$random4]["valeur"];
-    $valeur5 = $cartes[$random5]["valeur"];
-    $valeur6 = $cartes[$random6]["valeur"];
-    $valeur7 = $cartes[$random7]["valeur"];
-    $valeur8 = $cartes[$random8]["valeur"];
-    $valeur9 = $cartes[$random9]["valeur"];
-    $valeur10 = $cartes[$random10]["valeur"];
+    $CartesMelange = shuffle($cartes);
+    $mainjoueur = [$CartesMelange[0]["valeur"], $CartesMelange[1]["valeur"]];
+    echo $mainjoueur[0]["valeur"], $mainjoueur[1]["valeur"];
 
     ?>
 
-    <form action="button" type="button" name="Add">
-        <input type="button" value="Piocher">
-        <?php $sommecartesjoueur = $joueur1 + $valeur3 ?>
+    <form action="index1.php" method="post">
+        <input type="hidden" name="click" value="piocher" />
+        <button type="submit">Piocher</button>
+    </form>
+    <form action="index1.php" method="post">
+        <input type="hidden" name="click" value="rester" />
+        <button type="submit">Rester</button>
     </form>
 
-    <?php echo $joueur1, "+", $valeur3, "=", $sommecartesjoueur ?>
+    <?php
 
+    function piocher($joueur)
+    {
+        if ($joueur == 'piocher') {
+            // $_SESSION['mainJoueur1'] = array_merge($_SESSION['mainJoueur1'], array_splice($_SESSION['pioche'], 0, 1));
+            
+        }
+        if ($joueur == 'rester') {
+            $_SESSION['mainJoueur2'] = array_merge($_SESSION['mainJoueur2'], array_splice($_SESSION['pioche'], 0, 1));
+        }
+    }
 
-
-
-
-
+    if (isset($_POST['click'])) {
+        if ($_POST['click'] == "piocher") {
+            piocher('piocher');
+        }
+        if ($_POST['click'] == "rester") {
+            // piocher('j2');
+        }
+    }
+    ?>
 
 </body>
 
