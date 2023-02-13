@@ -22,7 +22,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	transition: 5s;
-	
+
 }
 
 .container div {
@@ -185,10 +185,11 @@ body {
 	background-color: #f44336;
 	transform: rotate(300deg);
 }
+
 #spin {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 50.75%;
 	transform: translate(-50%, -50%);
 	z-index: 10;
 	background-color: #e2e2e2;
@@ -205,19 +206,21 @@ body {
 	outline: none;
 	letter-spacing: 1px;
 }
-.roue__div span{
+
+.roue__div span {
 	transform: rotate(-90deg);
 }
-.arrow{
-	position: absolute;
-	left:61.5%;
+
+.arrow {
+	position: relative;
+	left: 515px;
 	transform: rotate(90deg);
-	color:#fff;
+	color: #fff;
 	z-index: 200;
 
 }
 
-.arrow::before{
-	content:"\1F817";
-	font-size:50px;
+.arrow::before {
+	content: "\1F817";
+	font-size: 50px;
 }
