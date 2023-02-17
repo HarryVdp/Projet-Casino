@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <?php
@@ -66,5 +67,6 @@ include 'tableauCartes.php';
     ?>
 
 </body>
+
 
 </html>
