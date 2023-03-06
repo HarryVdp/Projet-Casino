@@ -24,7 +24,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
-			text: 'Vous avez gagné 100 crédits',
+			text: 'Vous avez gagné 125 crédits',
 		})
 		//}
 	}
@@ -33,7 +33,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
-			text: 'Vous avez gagné 200 crédits'
+			text: 'Vous avez gagné 250 crédits'
 		})
 		//}
 	}
@@ -42,7 +42,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
-			text: 'Vous avez gagné 100 crédits',
+			text: 'Vous avez gagné 125 crédits',
 		})
 		//}
 
@@ -52,7 +52,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
-			text: 'Vous avez gagné 65 crédits',
+			text: 'Vous avez gagné 85 crédits',
 		})
 		//}
 	}
@@ -61,7 +61,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
-			text: 'Vous avez gagné 800 crédits',
+			text: 'Vous avez gagné 1200 crédits',
 		})
 		//}
 	}
@@ -70,7 +70,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
-			text: 'Vous avez gagné 75 crédits',
+			text: 'Vous avez gagné 100 crédits',
 		})
 		//}
 	}
@@ -79,7 +79,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
-			text: 'Vous avez gagné 400 crédits'
+			text: 'Vous avez gagné 800 crédits'
 		})
 		//}
 	}
@@ -88,7 +88,7 @@ btn.onclick = function () {
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
-			text: 'Vous avez gagné 50 crédits',
+			text: 'Vous avez gagné 75 crédits',
 		})
 		//}
 	}
