@@ -19,7 +19,7 @@ btn.onclick = function () {
 	angle = number % 360 + 11.5;
 	console.log(angle);
 
-	if (angle > 0 && angle < 48) {
+	if (angle >= 0 && angle < 48) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'error',
@@ -28,7 +28,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 49 && angle < 76) {
+	if (angle >= 48 && angle < 76) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'success',
@@ -37,7 +37,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 77 && angle < 127) {
+	if (angle >= 76 && angle < 127) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'error',
@@ -47,7 +47,7 @@ btn.onclick = function () {
 		//}
 
 	}
-	if (angle > 128 && angle < 196) {
+	if (angle >= 127 && angle < 196) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'error',
@@ -56,7 +56,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 197 && angle < 207) {
+	if (angle >= 196 && angle < 207) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'success',
@@ -65,7 +65,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 208 && angle < 268) {
+	if (angle >= 208 && angle < 268) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'error',
@@ -74,7 +74,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 269 && angle < 283) {
+	if (angle >= 268 && angle < 283) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'success',
@@ -83,7 +83,7 @@ btn.onclick = function () {
 		})
 		//}
 	}
-	if (angle > 284 && angle < 359) {
+	if (angle >= 283 && angle < 359) {
 		//function alertFunc() {
 		Swal.fire({
 			icon: 'error',
