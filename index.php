@@ -18,9 +18,9 @@ include 'tableauCartes.php';
     $_SESSION['pioche'] = $cartes;
     shuffle($_SESSION['pioche']);
 
-// Distribution des 2 carted joueur
+// Distribution des 2 cartes au joueur
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1]];
-    // array splice  permet de supprimer à partir de l'élément en 2e argument si pas de 3e agruent, c'est effacé jusqu'au
+    // array splice  permet de supprimer à partir de l'élément en 2e argument si pas de 3e argument, c'est effacé jusqu'à la fin
     array_splice($_SESSION['pioche'],0,2);
     // var_dump($_SESSION['pioche']);
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
@@ -29,7 +29,7 @@ include 'tableauCartes.php';
 
     ?>
 
-<!-- Si je clique sur le bouton Piochr j'obtiens un variable $_POST['click']=piocher -->
+<!-- Si je clique sur le bouton Piocher j'obtiens une variable $_POST['click']=piocher -->
     <form action="index.php" method="post">
         <input type="hidden" name="click" value="piocher" />
         <button type="submit">Piocher</button>
