@@ -18,16 +18,16 @@
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][2]["image"], ".png' alt='Image'>";
-    $_SESSION['somme'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"] + $_SESSION['mainjoueur'][2]["valeur"];
+    $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"] + $_SESSION['mainjoueur'][2]["valeur"];
     echo "<br>" ;
-    echo "La somme des cartes est :", $_SESSION['somme'] ;
+    echo "La somme des cartes est :", $_SESSION['sommejoueur'] ;
     ?>
 
     <form action="Pioche2Joueur.php" method="post">
         <input type="hidden" name="click" value="piocher" />
         <button type="submit">Piocher</button>
     </form>
-    <form action="Pioche2Joueur.php" method="post">
+    <form action="Croupier1.php" method="post">
         <input type="hidden" name="click" value="rester" />
         <button type="submit">Rester</button>
     </form>
