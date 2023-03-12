@@ -15,6 +15,8 @@
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1], $_SESSION['pioche'][2], $_SESSION['pioche'][3]] ;
     $_SESSION['pioche'];
     $_SESSION['mainjoueur'];
+    echo "Votre main";
+    echo "<br>" ;
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][2]["image"], ".png' alt='Image'>";
@@ -22,8 +24,11 @@
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"] + $_SESSION['mainjoueur'][2]["valeur"] + $_SESSION['mainjoueur'][3]["valeur"];
     echo "<br>" ;
     echo "La somme des cartes est :", $_SESSION['sommejoueur'];
+    echo "<br>" ;
 
     $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5]];
+    echo "Main du croupier";
+    echo "<br>" ;
     echo "<img src='images/", $maincroupier[0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $maincroupier[1]["image"], ".png' alt='Image'>";
     $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"];

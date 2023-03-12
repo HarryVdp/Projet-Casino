@@ -15,6 +15,8 @@
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1], $_SESSION['pioche'][2]] ;
     $_SESSION['pioche'];
     $_SESSION['mainjoueur'];
+    echo "Votre main";
+    echo "<br>" ;
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][2]["image"], ".png' alt='Image'>";

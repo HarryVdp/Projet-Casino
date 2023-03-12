@@ -25,6 +25,8 @@ include 'tableauCartes.php';
     // array_splice($_SESSION['pioche'],0,2);
     // var_dump($_SESSION['mainjoueur']);
     // var_dump($_SESSION['pioche']);
+    echo "Votre main";
+    echo "<br>" ;
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"];
