@@ -22,6 +22,10 @@ include 'tableauCartes.php';
     shuffle($_SESSION['pioche']);
     // Distribution des 2 cartes au joueur
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1]];
+    // array splice  permet de supprimer à partir de l'élément en 2e argument si pas de 3e argument, c'est effacé jusqu'à la fin
+    // array_splice($_SESSION['pioche'],0,2);
+    // var_dump($_SESSION['mainjoueur']);
+    // var_dump($_SESSION['pioche']);
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"];
