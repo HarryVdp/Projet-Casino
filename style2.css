@@ -1,15 +1,5 @@
-* {
-    margin: 0%;
-}
-
 body{
     text-align: center;
     size: 50px;
 }
 
-.video {
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: -1;
-}
