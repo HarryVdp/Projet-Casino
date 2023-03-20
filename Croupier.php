@@ -30,7 +30,7 @@ include 'function.php';
     echo "<br>" ;
     echo "<img src='images/", $maincroupier[0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $maincroupier[1]["image"], ".png' alt='Image'>";
-    $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["vaeur"];
+    $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"];
 
     if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier']) {
         $maincroupier = [$_SESSION['pioche'][2], $_SESSION['pioche'][3], $_SESSION['pioche'][4]];
