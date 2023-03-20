@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    size: 50px;
+}
+
+button{
+    margin: 10px auto 0;
+    color: #ffffff;
+    padding: 10px 10px;
+    background: #005f73;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 3px #001219;
+}
+
+button:hover{
+    box-shadow: 0 5px #001219;
+    top: 2px;
+}
+
+button:active{
+    box-shadow: 0 0 #001219;
+    top: 6px;
+}
