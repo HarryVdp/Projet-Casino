@@ -5,6 +5,7 @@ include 'function.php';
 ?>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,12 @@ include 'function.php';
 </head>
 
 <body>
-    <h1>Le 21</h1>
+    <h1>BlackJack</h1>
     <?php
     session_start();
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1], $_SESSION['pioche'][2], $_SESSION['pioche'][3]];
     $_SESSION['pioche'];
     $_SESSION['mainjoueur'];
-    echo "Votre main";
     echo "<br>" ;
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
@@ -29,7 +29,6 @@ include 'function.php';
     echo "La somme des cartes est :", $_SESSION['sommejoueur'];
 
     $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5]];
-    echo "Main du croupier";
     echo "<br>" ;
     echo "<img src='images/", $maincroupier[0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $maincroupier[1]["image"], ".png' alt='Image'>";
@@ -37,11 +36,11 @@ include 'function.php';
 
     if ($_SESSION['sommejoueur'] < 21) {
         if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier']) {
-            $maincroupier = [$_SESSION['pioche'][2], $_SESSION['pioche'][3], $_SESSION['pioche'][4]];
+            $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5], $_SESSION['pioche'][6]];
             $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"] + $maincroupier[2]["valeur"];
             echo "<img src='images/", $maincroupier[2]["image"], ".png' alt='Image'>";
             if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] < 21) {
-                $maincroupier = [$_SESSION['pioche'][2], $_SESSION['pioche'][3], $_SESSION['pioche'][4], $_SESSION['pioche'][5]];
+                $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5], $_SESSION['pioche'][6], $_SESSION['pioche'][7]];
                 $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"] + $maincroupier[2]["valeur"] + $maincroupier[3]["valeur"];
                 echo "<img src='images/", $maincroupier[3]["image"], ".png' alt='Image'>";
                 if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] < 21) {
