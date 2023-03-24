@@ -2,6 +2,6 @@
 Casino en ligne 
 
 blackjack => Jérémy et Antoine
-roue => Nathan 
+roue => Nathan + Harry
 connexion => Anton 
-page d'accuil => Harry et un peu tout le monde.
+page d'accuil => Anton 
