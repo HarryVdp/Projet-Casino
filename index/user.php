@@ -11,7 +11,7 @@
 
     
    
-<p>Bonjour <?=$_COOKIE['user']?>. Pour quiter appuyer <a href="index.php">ici</a></p>
+<p>Bonjour <?=$_COOKIE['user']?>. Pour quiter appuyer <a href="exit.php">ici</a></p>
 
 </body>
 </html>
