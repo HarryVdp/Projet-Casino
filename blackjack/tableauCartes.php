@@ -12,7 +12,7 @@ $cartes = [
     ["image" => "11_trefle", "valeur" => 10],
     ["image" => "12_trefle", "valeur" => 10],
     ["image" => "13_trefle", "valeur" => 10],
-    ["image" => "14_trefle", "valeur" => 1],
+    ["image" => "14_trefle", "valeur" => 11],
     ["image" => "2_pic", "valeur" => 2],
     ["image" => "3_pic", "valeur" => 3],
     ["image" => "4_pic", "valeur" => 4],
@@ -25,7 +25,7 @@ $cartes = [
     ["image" => "11_pic", "valeur" => 10],
     ["image" => "12_pic", "valeur" => 10],
     ["image" => "13_pic", "valeur" => 10],
-    ["image" => "14_pic", "valeur" => 1],
+    ["image" => "14_pic", "valeur" => 11],
     ["image" => "2_carreau", "valeur" => 2],
     ["image" => "3_carreau", "valeur" => 3],
     ["image" => "4_carreau", "valeur" => 4],
@@ -38,7 +38,7 @@ $cartes = [
     ["image" => "11_carreau", "valeur" => 10],
     ["image" => "12_carreau", "valeur" => 10],
     ["image" => "13_carreau", "valeur" => 10],
-    ["image" => "14_carreau", "valeur" => 1],
+    ["image" => "14_carreau", "valeur" => 11],
     ["image" => "2_coeur", "valeur" => 2],
     ["image" => "3_coeur", "valeur" => 3],
     ["image" => "4_coeur", "valeur" => 4],
@@ -51,6 +51,6 @@ $cartes = [
     ["image" => "11_coeur", "valeur" => 10],
     ["image" => "12_coeur", "valeur" => 10],
     ["image" => "13_coeur", "valeur" => 10],
-    ["image" => "14_coeur", "valeur" => 1]
+    ["image" => "14_coeur", "valeur" => 11]
 ];
 ?>
