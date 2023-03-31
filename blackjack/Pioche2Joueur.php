@@ -33,40 +33,66 @@ include 'function.php';
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"] + $_SESSION['mainjoueur'][2]["valeur"] + $_SESSION['mainjoueur'][3]["valeur"];
     echo "<br>" ;
     echo "La somme des cartes est :", $_SESSION['sommejoueur'];
-
+    $NbreCarteCroupier = 2;
+    $NbreCarteJoueur = 4;
     $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5]];
     echo "<br>" ;
     echo "<img src='images/", $maincroupier[0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $maincroupier[1]["image"], ".png' alt='Image'>";
     $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"];
 
-    if ($_SESSION['sommejoueur'] < 21) {
+    if ($_SESSION['sommejoueur'] < 21 && $_SESSION['sommecroupier'] != 21) {
         if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier']) {
-            $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5], $_SESSION['pioche'][6]];
+            $maincroupier = [$_SESSION['pioche'][3], $_SESSION['pioche'][4], $_SESSION['pioche'][5]];
+            $NbreCarteCroupier= 3;
+            if ($maincroupier[2]['valeur'] == 11 && $_SESSION['sommecroupier'] + $maincroupier[2]['valeur'] > 21){
+                $maincroupier[2]['valeur'] = 1;
+            }
             $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"] + $maincroupier[2]["valeur"];
             echo "<img src='images/", $maincroupier[2]["image"], ".png' alt='Image'>";
-            if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] < 21) {
-                $maincroupier = [$_SESSION['pioche'][4], $_SESSION['pioche'][5], $_SESSION['pioche'][6], $_SESSION['pioche'][7]];
+            
+            if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] <= 21) {
+                if ($_SESSION['sommecroupier'] == 21) {
+                    croupiergagnant();
+                } 
+                else {
+                $maincroupier = [$_SESSION['pioche'][3], $_SESSION['pioche'][4], $_SESSION['pioche'][5], $_SESSION['pioche'][6]];
+                $NbreCarteCroupier= 4;
+                if ($maincroupier[3]['valeur'] == 11 && $_SESSION['sommecroupier'] + $maincroupier[3]['valeur'] > 21){
+                $maincroupier[3]['valeur'] = 1;
+                }
                 $_SESSION['sommecroupier'] = $maincroupier[0]["valeur"] + $maincroupier[1]["valeur"] + $maincroupier[2]["valeur"] + $maincroupier[3]["valeur"];
                 echo "<img src='images/", $maincroupier[3]["image"], ".png' alt='Image'>";
-                if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] < 21) {
+                
+                if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] > 21) {
                     joueurgagnant();
-                } else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
-                    croupiergagnant();
-                } else {
+                } 
+                else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
+                    if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier > $NbreCarteJoueur){
+                        joueurgagnant();
+                        }
+                        else {croupiergagnant();}
+                } 
+                else {
                     joueurgagnant();
                 }
-            } else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
-                croupiergagnant();
+            } 
+        }else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
+            if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier > $NbreCarteJoueur){
+                joueurgagnant();
+                }
+                else {croupiergagnant();}
             } else {
                 joueurgagnant();
             }
         } else {
             croupiergagnant();
         }
-    } else if ($_SESSION['sommejoueur'] == 21) {
+    } 
+    else if ($_SESSION['sommejoueur'] == 21) {
         joueurgagnant();
-    } else {
+    } 
+    else {
         croupiergagnant();
     }
 

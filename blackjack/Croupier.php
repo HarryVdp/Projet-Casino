@@ -56,20 +56,20 @@ include 'function.php';
                 joueurgagnant();
             } 
             else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
-                if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier <= $NbreCarteJoueur){
-                    croupiergagnant();
+                if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier > $NbreCarteJoueur){
+                    joueurgagnant();
                     }
-                    else {joueurgagnant();}
+                    else {croupiergagnant();}
             } 
             else {
                 joueurgagnant();
             }
         } 
-        else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) {
-            if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier <= $NbreCarteJoueur){
-            croupiergagnant();
+        else if ($_SESSION['sommecroupier'] <= 21 && $_SESSION['sommecroupier'] >= $_SESSION['sommejoueur']) { 
+            if ($_SESSION['sommejoueur'] == $_SESSION['sommecroupier'] && $NbreCarteCroupier > $NbreCarteJoueur){
+            joueurgagnant();
             }
-            else {joueurgagnant();}
+            else {croupiergagnant();}
         } 
         else {
             joueurgagnant();
