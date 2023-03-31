@@ -29,6 +29,9 @@
         </div>
         <?php
     } 
+    else if ($_SESSION['VictoireJoueur'] == $_SESSION['Victoirecroupier']){
+            echo "Il y a égalité car vous avez tout les deux gagné ", $_SESSION['VictoireJoueur'], " fois !";
+    }
     else {
         echo "Tu as gagné ", $_SESSION['VictoireJoueur'], " fois et le croupier a gagné ", $_SESSION['Victoirecroupier'], " fois !";
         echo "<br>";
