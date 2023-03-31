@@ -11,6 +11,7 @@
 <body>
 	<button id="spin">150<br/>Spin</button>
 	<span class="arrow"></span>
+	<button id="reload-button" onclick="location.reload();">Recharger la page</button>
 <div class="container">
 	
 	<div class="one roue__div"><span>125</span> </div>
