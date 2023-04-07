@@ -3,6 +3,12 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(10 * Math.random() * 1000);
 //let timeout;
 
+// Récupérer la valeur de la variable nom
+
+
+ 
+
+// Envoyer la variable nom à la page traitement.php en utilisant la méthode POST
 
 //let number = 90;
 var angle = 0;
@@ -112,6 +118,17 @@ btn.onclick = function () {
 else{
 	console.log("Nul ! tu es pauvre ")
 }
+fetch('rouealeatoire.php', {
+	  method: 'POST',
+	  body: JSON.stringify({money : money}),
+	  headers: {
+	    'Content-Type': 'application/json'
+	  }
+	}).then(response => {
+	  console.log('La variable nom a été envoyée avec succès.');
+	}).catch(error => {
+	  console.error('Une erreur s\'est produite lors de l\'envoi de la variable nom.');
+	});
 	}
 	
 

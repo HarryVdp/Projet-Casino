@@ -125,7 +125,7 @@
                         <p class="game__item-descript">
                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur dignissimos provident 
                         </p>
-                        <a href="#" class="game__item-btn">jouer</a>
+                        <a href="../rouealeatoire/rouealeatoire.php" class="game__item-btn">jouer</a>
                     </div>
                 </li>
                 <li class="game__item game__item-2">
