@@ -25,6 +25,12 @@ include 'function.php';
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][2]["image"], ".png' alt='Image'>";
+    if ($_SESSION['mainjoueur'][1]['valeur'] == 11 && $_SESSION['mainjoueur'][0]['valeur'] + $_SESSION['mainjoueur'][1]['valeur'] > 21){
+        $_SESSION['mainjoueur'][1]['valeur'] = 1;
+    }
+    if ($_SESSION['mainjoueur'][2]['valeur'] == 11 && $_SESSION['mainjoueur'][0]['valeur'] + $_SESSION['mainjoueur'][1]['valeur'] + $_SESSION['mainjoueur'][2]['valeur']> 21){
+        $_SESSION['mainjoueur'][2]['valeur'] = 1;
+    }
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"] + $_SESSION['mainjoueur'][2]["valeur"];
     echo "<br>" ;
     echo "La somme de vos cartes est :", $_SESSION['sommejoueur'] ;

@@ -20,6 +20,7 @@ include 'tableauCartes.php';
     <h1>BlackJack</h1>
     <?php
     $_SESSION['pioche'] = $cartes;
+    $_SESSION['sommejoueur'] = 0;
     shuffle($_SESSION['pioche']);
     // Distribution des 2 cartes au joueur
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1]];
@@ -29,6 +30,10 @@ include 'tableauCartes.php';
     // var_dump($_SESSION['pioche']);
     echo "<img src='images/", $_SESSION['mainjoueur'][0]["image"], ".png' alt='Image'>";
     echo "<img src='images/", $_SESSION['mainjoueur'][1]["image"], ".png' alt='Image'>";
+    if ($_SESSION['mainjoueur'][1]['valeur'] == 11 && $_SESSION['mainjoueur'][0]['valeur'] + $_SESSION['mainjoueur'][1]['valeur'] > 21){
+        $_SESSION['mainjoueur'][1]['valeur'] = 1;
+    }
+
     $_SESSION['sommejoueur'] = $_SESSION['mainjoueur'][0]["valeur"] + $_SESSION['mainjoueur'][1]["valeur"];
     echo "<br>";
     echo "La somme de tes cartes est de ", $_SESSION['sommejoueur'];
