@@ -26,6 +26,12 @@
 	<div class="seven roue__div"><span>1200</span> </div>
 	<div class="eight roue__div"><span>85</span> </div>
 </div>
-    <script src="roue.js"></script>
+<?php
+	$money = 1500;
+?>
+<script>
+	var money = <?php echo json_encode($money); ?>;
+</script>
+	<script src="roue.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ container.style.transform = "rotate(" + -11.5 + "deg)";
 number = number - 11.5;
 //number = 360 - 11.5;
 btn.onclick = function () {
+	if(money >= 150){
+		money -= 150;
 	container.style.transform = "rotate(" + number + "deg)";
 	//function myFunction() {
 	//timeout = setTimeout(alertFunc, 3000);
@@ -20,7 +22,9 @@ btn.onclick = function () {
 	console.log(angle);
 
 	if (angle >= 0 && angle < 48) {
+		money += 125;
 		setTimeout(function(){
+			
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -29,7 +33,9 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 48 && angle < 76) {
+		money += 250;
 		setTimeout(function(){
+			
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
@@ -38,7 +44,9 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 76 && angle < 127) {
+		money += 125;
 		setTimeout(function(){
+			
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -48,7 +56,9 @@ btn.onclick = function () {
 
 	}
 	if (angle >= 127 && angle < 196) {
+		money += 85;
 		setTimeout(function(){
+			
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -57,7 +67,9 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 196 && angle < 207) {
+		money += 1200;
 		setTimeout(function(){
+			
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
@@ -66,6 +78,7 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 208 && angle < 268) {
+		money += 100;
 		setTimeout(function(){
 		Swal.fire({
 			icon: 'error',
@@ -75,6 +88,7 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 268 && angle < 283) {
+		money += 800;
 		setTimeout(function(){
 		Swal.fire({
 			icon: 'success',
@@ -84,6 +98,7 @@ btn.onclick = function () {
 		},5000)
 	}
 	if (angle >= 283 && angle < 359) {
+		money += 75;
 		setTimeout(function(){
 		Swal.fire({
 			icon: 'error',
@@ -92,6 +107,15 @@ btn.onclick = function () {
 		})
 		},5000)
 	}
+	console.log(money)
 }
+else{
+	console.log("Nul ! tu es pauvre ")
+}
+	}
+	
+
+
+
 
 
