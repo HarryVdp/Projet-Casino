@@ -24,9 +24,9 @@
             <div class="navbar">
                 <div class="logo"> <a href="#"> Casino </a> </div>
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>a propos</a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>jeux </a></li>
-                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Contact</a></li>
+                    <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>a propos</a></li>
+                    <li class="menu__item"><a href="#game" class="menu__item-link" data-scroll>jeux </a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__item-link" data-scroll>Contact</a></li>
                 </ul>
                 <?php 
         if($_COOKIE['user'] == ''):
@@ -36,7 +36,7 @@
                     <li id="show-signin" class="menu__item"><button  class="menu__item-link" >sign in </button></li>
                 </ul>
                 <?php else:?>
-       <a class="menu__item-link" href="user.php"> <?=$_COOKIE['user']?> </a>
+       <a class="menu__item-link" href="user.php"> <?=$_COOKIE['user'] ?>  </a>
     <?php endif;?>
                 <div class="burger">
                     <span></span>
@@ -80,7 +80,7 @@
             <p class="header__text">
                 Découvrez le project Casino des 5TTB
             </p>
-            <a href="#main" class="header__btn">
+            <a href="#about" class="header__btn">
                 Poursuivre
             </a>
         </div>
@@ -91,7 +91,7 @@
 
     <!-- Main Page -->
    
-    <main id="main" class="main">
+    <main id="about" class="main">
     <div class="container">
         <h1 class="main__title">
             A Propos
@@ -109,7 +109,7 @@
     </div>
 </main>
 
-    <section class="game">
+    <section id="game" class="game">
     <div class="container">
         <h1 class="game__title">
             jeux
@@ -146,7 +146,7 @@
     </div>
 </section>
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
     <div class="container">
         <div class="footer">
             <h1 class="footer__title">

@@ -135,6 +135,8 @@ nav {
 
 .logo a {
   color: #fff;
+  text-transform: uppercase;
+  font-size: 26px;
 }
 
 .popup {
@@ -298,18 +300,7 @@ nav {
   position: relative;
 }
 
-.header__content::before {
-  content: "";
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  bottom: -230%;
-  left: 0;
-  background-image: url("../img/roulette.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .header__title {
   font-weight: 700;
@@ -404,7 +395,9 @@ nav {
   text-align: center;
   margin-bottom: 50px;
 }
-
+.header__user{
+  outline: none ;
+}
 .game__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,6 +500,39 @@ nav {
   margin-top: 20px;
 }
 
+/* page user.php */
+
+.user__name{
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 700;
+}
+.user__wallet{
+
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+}
+.user__content{
+  display: flex;
+ justify-content: space-around;
+}
+.user__btn{
+  
+  background-color: #fff;
+  padding: 15px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.user__btn::hover{
+  background-color: #000;
+  color: #fff;
+}
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
