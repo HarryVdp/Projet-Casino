@@ -20,7 +20,8 @@ include 'tableauCartes.php';
     <h1>BlackJack</h1>
     <?php
     $_SESSION['pioche'] = $cartes;
-    $_SESSION['sommejoueur'] = 0;
+    $_SESSION['victoirejoueur'] = 0;
+    $_SESSION['victoirecroupier'] = 0;
     shuffle($_SESSION['pioche']);
     // Distribution des 2 cartes au joueur
     $_SESSION['mainjoueur'] = [$_SESSION['pioche'][0], $_SESSION['pioche'][1]];
