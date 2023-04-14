@@ -374,10 +374,16 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-.main__btn img{
-width: 70px;
+.main__btn{
+  position: relative;
+  color: #fff;
+  z-index: 200; 
 }
-
+.main__btn::before {
+  content: "\1F817";  
+  transform: rotate(90deg);  
+  font-size: 100px;  
+}
 
 .main__text {
   margin: 15px 0;

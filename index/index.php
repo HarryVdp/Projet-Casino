@@ -109,7 +109,7 @@
             </div>
         </div>
         <a href="#game" class="main__btn">
-       <img src="img/arrow-right-solid.svg" alt="" srcset="">
+       
         </a>
     </div>
 </main>
