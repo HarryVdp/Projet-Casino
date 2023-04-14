@@ -99,10 +99,10 @@
         
         <div class="main__content">
             <p class="main__text">
-                Bonjour, voici notre Casino en ligne. Celui-ci à été créer par 5 étudiants de 5ème Secondaire du Collège Notre-Dame de Bon Secours à Binche. Il a été encadré par le proffesseur Mme Piron.
+                Bonjour, voici notre Casino en ligne. Celui-ci à été créer par 5 étudiants de 5e Secondaire du Collège Notre-Dame de Bon Secours à Binche. Il a été encadré par leur proffesseur : Mme Piron.
                 <br>
                 <br>
-                Ce projet à été lancé en Janvier et a pour but de divertir
+                Ce projet à été lancé en Janvier et a pour but de vous divertir et de nous faire découvrir php, JavaScript et mysql dans le cadre d'un travail de groupe
             </p>
             <div class="main__img">
                 <img src="img/photo_groupe.png" alt="Photo du groupe">
@@ -128,8 +128,7 @@
                             jeux 1
                         </h2>
                         <p class="game__item-descript">
-                           Dans ce jeu, pour la somme de 150 crédits. Vous pouvez faire tourner la route et essayer de gagne bien plus.
-                        </p>
+                            Dans ce jeu, pour une mise de 150 crédits, vous pouvez faire tourner la roue et essayer de gagner bien plus!                        </p>
                         <a href="../rouealeatoire/rouealeatoire.php" class="game__item-btn">jouer</a>
                     </div>
                 </li>
@@ -139,7 +138,7 @@
                             jeux 2
                         </h2>
                         <p class="game__item-descript">
-                           Dans ce jeu, essayer d'exploser le croupier. Et de gagner plein de crédits. 
+                            Dans ce jeu, essayez d'exploser le croupier... pour de gagner plein de crédits!                        
                         </p>
                         <a href="../blackjack/index.php" class="game__item-btn">jouer</a>
                     </div>
