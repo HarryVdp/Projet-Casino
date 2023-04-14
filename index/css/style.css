@@ -125,6 +125,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -132,9 +133,15 @@ nav {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.navbar img{
+  width: 150px;
+  height: 150px;
+}
 
-.logo a {
+.logo{
   color: #fff;
+  text-transform: uppercase;
+  font-size: 26px;
 }
 
 .popup {
@@ -251,6 +258,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  
 }
 
 .menu__item {
@@ -262,6 +270,7 @@ nav {
   color: #fff;
   position: relative;
 }
+
 
 .menu__item-link::before {
   content: "";
@@ -298,18 +307,7 @@ nav {
   position: relative;
 }
 
-.header__content::before {
-  content: "";
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  bottom: -230%;
-  left: 0;
-  background-image: url("../img/roulette.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .header__title {
   font-weight: 700;
@@ -376,6 +374,16 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
+.main__btn{
+  position: relative;
+  color: #fff;
+  z-index: 200; 
+}
+.main__btn::before {
+  content: "\1F817";  
+  transform: rotate(90deg);  
+  font-size: 100px;  
+}
 
 .main__text {
   margin: 15px 0;
@@ -385,8 +393,8 @@ nav {
 
 .main__img {
   background-color: #001219;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   text-align: center;
 }
 
@@ -404,7 +412,9 @@ nav {
   text-align: center;
   margin-bottom: 50px;
 }
-
+.header__user{
+  outline: none ;
+}
 .game__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,6 +517,39 @@ nav {
   margin-top: 20px;
 }
 
+/* page user.php */
+
+.user__name{
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 700;
+}
+.user__wallet{
+
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+}
+.user__content{
+  display: flex;
+ justify-content: space-around;
+}
+.user__btn{
+  
+  background-color: #fff;
+  padding: 15px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.user__btn::hover{
+  background-color: #000;
+  color: #fff;
+}
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
