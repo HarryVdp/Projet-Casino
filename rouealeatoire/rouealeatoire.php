@@ -64,7 +64,7 @@ $new_money = $_POST['money'];
 
 
 // Afficher la valeur de la variable nom
- echo 'La variable money vaut : '.$money;
+// echo 'La variable money vaut : '.$money;
 
 	  $sql = "UPDATE users SET money=$new_money WHERE id=$id";
 	  $money_result = mysqli_query($conn, $sql);
