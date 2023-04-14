@@ -54,7 +54,7 @@ $result = mysqli_query($conn, $sql);
     <nav>
         <div class="container">
             <div class="navbar">
-                <div class="logo"> <a href="index.php"> Casino </a> </div>
+            <div class="logo"> <a href="index.php"> <img src="../logo_casino_svg/logo-no-background.svg" alt="logo casino royal roja"> </a> </div>
                 <ul class="menu">
                     <li class="menu__item"><a href="index.php" class="menu__item-link" data-scroll>a propos</a></li>
                     <li class="menu__item"><a href="index.php" class="menu__item-link" data-scroll>jeux </a></li>

@@ -160,6 +160,8 @@
                 Collège Notre-Dame de Bon Secours
                 <br>
                 Rue de Merbes 25, 7130 Binche
+                <br>
+                5TTB-2022/2023
             </p>
         </div>
     </div>
