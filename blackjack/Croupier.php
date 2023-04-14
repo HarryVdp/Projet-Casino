@@ -47,7 +47,9 @@ include 'function.php';
         echo "<img src='images/", $maincroupier[2]["image"], ".png' alt='Image'>";
         
         if ($_SESSION['sommejoueur'] > $_SESSION['sommecroupier'] && $_SESSION['sommecroupier'] < 21) {
-            $maincroupier = [$_SESSION['pioche'][2], $_SESSION['pioche'][3], $_SESSION['pioche'][4], $_SESSION['pioche'][5]];
+        //    array_push ajoute un élément à un array
+            array_push($maincroupier, $_SESSION['pioche'][5]);
+            // $maincroupier = [$_SESSION['pioche'][2], $_SESSION['pioche'][3], $_SESSION['pioche'][4], $_SESSION['pioche'][5]];
             $NbreCarteCroupier= 4;
             if ($maincroupier[3]['valeur'] == 11 && $_SESSION['sommecroupier'] + $maincroupier[3]['valeur'] > 21){
                 $maincroupier[3]['valeur'] = 1;
