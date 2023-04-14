@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="main__body">
@@ -22,7 +22,7 @@
     <nav>
         <div class="container">
             <div class="navbar">
-                <div class="logo"> <a href="#"> Casino </a> </div>
+                <div class="logo"> <a href="index.php"> <img src="../logo_casino_svg/logo-no-background.svg" alt="logo casino royal roja"> </a> </div>
                 <ul class="menu">
                     <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>a propos</a></li>
                     <li class="menu__item"><a href="#game" class="menu__item-link" data-scroll>jeux </a></li>
@@ -99,13 +99,16 @@
         
         <div class="main__content">
             <p class="main__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic dolores necessitatibus similique vel iusto consequuntur dolor quis, quisquam nisi eaque possimus qui non, cum veniam cumque quidem. Ad, corrupti quisquam!
+                Bonjour, voici notre Casino en ligne. Celui-ci à été créer par 5 étudiants de 5ème Secondaire du Collège Notre-Dame de Bon Secours à Binche. Il a été encadré par le proffesseur Mme Piron.
+                <br>
+                <br>
+                Ce projet à été lancé en Janvier et a pour but de divertir
             </p>
             <div class="main__img">
-                img
+                <img src="img/photo_groupe.png" alt="Photo du groupe">
             </div>
         </div>
-        <a href="#game" class="main__btn">fleche</a>
+        <a href="#game" class="main__btn"></a>
     </div>
 </main>
 
@@ -123,7 +126,7 @@
                             jeux 1
                         </h2>
                         <p class="game__item-descript">
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur dignissimos provident 
+                           Dans ce jeu, pour la somme de 150 crédits. Vous pouvez faire tourner la route et essayer de gagne bien plus.
                         </p>
                         <a href="../rouealeatoire/rouealeatoire.php" class="game__item-btn">jouer</a>
                     </div>
@@ -134,9 +137,9 @@
                             jeux 2
                         </h2>
                         <p class="game__item-descript">
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur dignissimos provident 
+                           Dans ce jeu, essayer d'exploser le croupier. Et de gagner plein de crédits. 
                         </p>
-                        <a href="#" class="game__item-btn">jouer</a>
+                        <a href="../blackjack/index.php" class="game__item-btn">jouer</a>
                     </div>
                 </li>
                 
@@ -152,8 +155,11 @@
             <h1 class="footer__title">
                 Contact
             </h1>
+            <div class="logo"> <img src="img/logo_cndbs.png" alt="logo cndbs binche"> </div>
             <p class="footer__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae molestias eligendi architecto a debitis sint nostrum vel, provident ducimus explicabo distinctio rerum dicta fuga laudantium, atque maiores, repellendus nemo.
+                Collège Notre-Dame de Bon Secours
+                <br>
+                Rue de Merbes 25, 7130 Binche
             </p>
         </div>
     </div>
