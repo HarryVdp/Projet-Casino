@@ -17,6 +17,7 @@
         echo "<br>";
         echo "Tu remportes ce round !";
         $_SESSION['VictoireJoueur'] = $_SESSION['VictoireJoueur'] + 1;
+        
     }
 
     function croupiergagnant()
@@ -26,6 +27,7 @@
         echo "<br>";
         echo "Le croupier a gagné !";
         $_SESSION['Victoirecroupier'] = $_SESSION['Victoirecroupier'] + 1;
+        
     }
     ?>
 </body>

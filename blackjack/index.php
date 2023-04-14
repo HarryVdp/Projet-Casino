@@ -5,8 +5,9 @@ session_start();
 <html lang="fr">
 <?php
 include 'tableauCartes.php';
-?>
 
+
+?>
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -17,7 +18,11 @@ include 'tableauCartes.php';
 </head>
 
 <body>
-<div class="logo"> <a href="#"> Casino </a> </div>
+    <nav>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo"> <a href="../index/index.php"> <img src="../logo_casino_svg/logo-no-background.svg"> </a> </div>
+ 
 <?php 
         if($_COOKIE['user'] == ''):
         ?>

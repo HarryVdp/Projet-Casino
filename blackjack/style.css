@@ -11,7 +11,28 @@ body {
     background: #000;
     color: white;
 }
-
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.navbar{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar img{
+  width: 150px;
+  height: 150px;
+}
 button {
     margin: 10px auto 0;
     color: #001219;
