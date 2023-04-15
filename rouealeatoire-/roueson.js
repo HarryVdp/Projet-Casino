@@ -1,9 +1,6 @@
 let container = document.querySelector(".container");
 let btn = document.getElementById("spin");
 let number = Math.ceil(10 * Math.random() * 1000);
-//let timeout;
-
-// Récupérer la valeur de la variable nom
 
 let loose = new Audio("loose.mp3");
 
@@ -11,13 +8,12 @@ let loose = new Audio("loose.mp3");
 let win = new Audio("win.mp3");
 
 
-// Envoyer la variable nom à la page traitement.php en utilisant la méthode POST
 
-//let number = 90;
+
+
 var angle = 0;
 container.style.transform = "rotate(" + -11.5 + "deg)";
 number = number - 11.5;
-//number = 360 - 11.5;
 btn.onclick = function () {
 	if(money >= 150){
 		money -= 150;
@@ -115,9 +111,14 @@ btn.onclick = function () {
 		},5000)
 	}
 	console.log(money)
-	document.cookie = "money =" + money;
 }
 else{
 	console.log("Nul ! tu es pauvre ")
 }
-}
+	}
+	
+
+
+
+
+
