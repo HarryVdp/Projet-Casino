@@ -3,6 +3,12 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(10 * Math.random() * 1000);
 //let timeout;
 
+// Récupérer la valeur de la variable nom
+
+
+
+
+// Envoyer la variable nom à la page traitement.php en utilisant la méthode POST
 
 //let number = 90;
 var angle = 0;
@@ -24,7 +30,7 @@ btn.onclick = function () {
 	if (angle >= 0 && angle < 48) {
 		money += 125;
 		setTimeout(function(){
-			
+
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -35,7 +41,7 @@ btn.onclick = function () {
 	if (angle >= 48 && angle < 76) {
 		money += 250;
 		setTimeout(function(){
-			
+
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
@@ -46,7 +52,7 @@ btn.onclick = function () {
 	if (angle >= 76 && angle < 127) {
 		money += 125;
 		setTimeout(function(){
-			
+
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -58,7 +64,7 @@ btn.onclick = function () {
 	if (angle >= 127 && angle < 196) {
 		money += 85;
 		setTimeout(function(){
-			
+
 		Swal.fire({
 			icon: 'error',
 			title: 'Dommage !',
@@ -69,7 +75,7 @@ btn.onclick = function () {
 	if (angle >= 196 && angle < 207) {
 		money += 1200;
 		setTimeout(function(){
-			
+
 		Swal.fire({
 			icon: 'success',
 			title: 'Bravo !',
@@ -108,14 +114,20 @@ btn.onclick = function () {
 		},5000)
 	}
 	console.log(money)
+	document.cookie = "money =" + money;
 }
 else{
 	console.log("Nul ! tu es pauvre ")
 }
+fetch('rouealeatoire.php', {
+	  method: 'POST',
+	  body: JSON.stringify({money : money}),
+	  headers: {
+	    'Content-Type': 'application/json'
+	  }
+	}).then(response => {
+	  console.log('La variable nom a été envoyée avec succès.');
+	}).catch(error => {
+	  console.error('Une erreur s\'est produite lors de l\'envoi de la variable nom.');
+	});
 	}
-	
-
-
-
-
-

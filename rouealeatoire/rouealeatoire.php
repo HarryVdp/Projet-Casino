@@ -13,11 +13,12 @@
 	<?php error_reporting(E_ERROR | E_PARSE);?>
 </head>
 <body>
+
 	<button id="spin">150<br/>Spin</button>
 	<span class="arrow"></span>
 	<button id="reload-button" onclick="location.reload();">Recharger la page</button>
 <div class="container">
-	
+
 	<div class="one roue__div"><span>125</span> </div>
 	<div class="two roue__div"><span>250</span> </div>
 	<div class="three roue__div"><span>125</span> </div>
@@ -28,53 +29,45 @@
 	<div class="eight roue__div"><span>85</span> </div>
 </div>
 <?php
-	
+
 	$servername = "localhost:3306";
 	$username = "root";
 	$password = "root";
 	$dbname = "register-bd";
-	
+
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$id_request = "SELECT id FROM users WHERE name='$_COOKIE[user]'";
 	$id_result = mysqli_query($conn, $id_request);
-	
-	
+
+
 	if (mysqli_num_rows($id_result) > 0) {
 		$row = mysqli_fetch_assoc($id_result);
 		$id = $row["id"];
-		// echo "L'ID de l'utilisateur  est : " . $id;
+
 	} else {
-		
+
 	}
 	$sql = "SELECT money FROM users WHERE id=$id";
 	$result = mysqli_query($conn, $sql);
-	  
+
 	  if (mysqli_num_rows($result) > 0) {
-		  // Récupération de la valeur de la variable "money"
+
 		  $row = mysqli_fetch_assoc($result);
 		  $money = $row["money"];
-		//   echo "La variable money de l'utilisateur est : " . $money;
-	  } else {
-	
-	  } 
-	  
-// Récupérer la valeur de la variable nom
-$new_money = $_POST['money'];
 
+	  }
+	  $new_money = $_COOKIE['money'];
 
-
-// Afficher la valeur de la variable nom
-// echo 'La variable money vaut : '.$money;
 
 	  $sql = "UPDATE users SET money=$new_money WHERE id=$id";
 	  $money_result = mysqli_query($conn, $sql);
-	  
-	  
-	  
-	
-	
-	  
-	
+
+
+
+
+
+
+
 ?>
 <script>
 	var money = <?php echo json_encode($money); ?>;
